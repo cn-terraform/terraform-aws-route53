@@ -29,9 +29,16 @@ variable "create_hosted_zone" {
   default     = true
 }
 
+variable "hosted_zone_id" {
+  type        = string
+  description = "(Optional) Required when create_hosted_zone is false. This is the hosted zone where records will be created."
+  default     = null
+}
+
 variable "hosted_zone_name" {
   type        = string
-  description = "(Required) This is the name of the hosted zone."
+  description = "(Optional) Required when create_hosted_zone is true. This is the name of the hosted zone."
+  default     = null
 }
 
 variable "comment" {

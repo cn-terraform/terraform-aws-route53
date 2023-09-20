@@ -1,5 +1,5 @@
 #------------------------------------------------------------------------------
-# Hosted Zone variables
+# Hosted Zone
 #------------------------------------------------------------------------------
 output "arn" {
   description = "The Amazon Resource Name (ARN) of the Hosted Zone."
@@ -24,4 +24,11 @@ output "primary_name_server" {
 output "tags_all" {
   description = "A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block."
   value       = var.create_hosted_zone ? aws_route53_zone.this[0].tags_all : null
+}
+
+#------------------------------------------------------------------------------
+# Records
+#------------------------------------------------------------------------------
+output "records" {
+  value = aws_route53_record.records
 }
