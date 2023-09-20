@@ -28,7 +28,7 @@ jobs:
     container: hashicorp/terraform
     strategy:
       matrix: {
-        dir: ['examples/test']
+        dir: ['examples/not-create-zone','examples/private-zone','examples/public-zone']
       }
     services:
       localstack:
