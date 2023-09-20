@@ -22,20 +22,6 @@ resource "aws_route53_zone" "this" {
 
 
 
-# data "aws_route53_zone" "selected" {
-#   name         = "test.com."
-#   private_zone = true
-# }
-
-
-
-
-
-
-
-
-
-
 
 
 # This resource supports the following arguments:
