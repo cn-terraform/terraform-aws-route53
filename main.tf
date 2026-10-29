@@ -22,6 +22,7 @@ resource "aws_route53_record" "records" {
   zone_id = var.create_hosted_zone ? aws_route53_zone.this[0].id : var.hosted_zone_id
 
   allow_overwrite = try(each.value.allow_overwrite, null)
+  health_check_id = try(each.value.health_check_id, null)
   name            = try(each.key, null)
   records         = try(each.value.records, null)
   ttl             = try(each.value.ttl, null)
