@@ -1,4 +1,5 @@
 # Required to test private zone
+# trivy:ignore:AWS-0178 (MEDIUM): VPC does not have VPC Flow Logs enabled.
 resource "aws_vpc" "vpc" {
   cidr_block = "172.16.0.0/16"
 }

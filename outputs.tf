@@ -30,5 +30,6 @@ output "tags_all" {
 # Records
 #------------------------------------------------------------------------------
 output "records" {
-  value = aws_route53_record.records
+  description = "List of created records"
+  value       = aws_route53_record.records
 }
